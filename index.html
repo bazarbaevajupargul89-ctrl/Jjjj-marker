@@ -3,69 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="MARKER — идеяңызды жарқын көрсететін заманауи шығармашылық студия." />
-  <title>MARKER — Идеяңды белгіле</title>
+  <meta name="description" content="Jetisý Taxi — Алматы облысы бойынша такси шақыру сервисі." />
+  <title>Jetisý Taxi — Алматы облысы</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="#top" aria-label="MARKER басты бетке">M<span>.</span></a>
-    <nav class="nav" id="nav">
-      <a href="#about">Біз туралы</a>
-      <a href="#services">Қызметтер</a>
-      <a href="#work">Жобалар</a>
-      <a href="#contact">Байланыс</a>
-    </nav>
-    <a class="header-cta" href="#contact">Жоба бастау <span>↗</span></a>
-    <button class="menu-toggle" aria-label="Мәзірді ашу" aria-expanded="false"><span></span><span></span></button>
+  <header class="topbar">
+    <a href="#home" class="brand"><span class="brand-mark">J</span><span>Jetisý <b>Taxi</b><small>АЛМАТЫ ОБЛЫСЫ</small></span></a>
+    <nav><a href="#order">Такси шақыру</a><a href="#advantages">Артықшылықтар</a><a href="#history">Тапсырыстар</a></nav>
+    <button class="phone-btn" id="callBtn">☎ 7070</button>
+    <button class="hamburger" id="menuBtn">☰</button>
   </header>
 
-  <main id="top">
+  <main id="home">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> Шығармашылық студия · Алматы</p>
-        <h1>Идеяңды<br /><em>белгіле.</em></h1>
-        <p class="hero-text">Брендтерге өз мінезін табуға көмектесетін дизайн және цифрлық шешімдер жасаймыз.</p>
-        <a class="button button-dark" href="#work">Жұмыстарды көру <span>↘</span></a>
-      </div>
-      <div class="hero-art" aria-label="Абстрактілі графика">
-        <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
-        <div class="art-ring"></div><div class="art-star">✦</div>
-        <div class="art-label">MAKE<br />YOUR<br /><strong>MARK</strong></div>
-      </div>
-      <div class="hero-bottom"><span>01 / 03</span><span class="scroll-line"></span><span>Төмен сырғытыңыз ↓</span></div>
+      <div class="hero-copy"><div class="status"><i></i> Жүргізушілер онлайн</div><h1>Қала ішінде<br /><span>жылдам әрі</span><br />қауіпсіз.</h1><p>Алматы облысының барлық қалалары мен аудандарына сенімді такси. Бағаны алдын ала біліңіз.</p><a href="#order" class="primary-btn">Такси шақыру <b>→</b></a><div class="trust"><strong>4.9/5</strong><span>★★★★★<small>2 400+ пікір</small></span><em>10 мин<br /><small>орташа күту</small></em></div></div>
+      <div class="hero-visual"><div class="map-grid"></div><div class="road road-a"></div><div class="road road-b"></div><div class="pin pin-a">●</div><div class="pin pin-b">●</div><div class="car-card"><span class="car-icon">🚕</span><div><b>Жақын көлік</b><small>Ақ түсті Toyota Camry</small></div><strong>3 мин</strong></div><div class="map-label">ALMATY<br /><b>REGION</b></div></div>
     </section>
 
-    <section class="intro section" id="about">
-      <div class="section-tag">01 — БІЗ ТУРАЛЫ</div>
-      <div class="intro-content"><h2>Көрінетін нәрсе<br />әрқашан <span>есте қалады.</span></h2><p>MARKER — стратегия, дизайн және технологияны біріктіретін шағын, бірақ батыл команда. Біз бос кеңістікті мағыналы идеяға айналдырамыз.</p><a class="text-link" href="#contact">Бізбен танысу <span>↗</span></a></div>
-    </section>
+    <section class="order-section" id="order"><div class="section-title"><span>01 / ТАПСЫРЫС</span><h2>Қазір көлік<br /><i>шақырыңыз.</i></h2><p>Маршрутты енгізіңіз — жүйе сапар құнын бірден есептейді.</p></div><div class="order-layout"><form class="order-card" id="orderForm"><div class="form-head"><h3>Жаңа тапсырыс</h3><span>● Дайын</span></div><label>Қай жерден аласыз?<div class="input-wrap"><span>●</span><input id="from" required placeholder="Мысалы: Қонаев, 10-ықшамаудан, 12" /></div></label><label>Қайда барасыз?<div class="input-wrap destination"><span>●</span><input id="to" required placeholder="Мысалы: Алматы, әуежай" /></div></label><div class="form-row"><label>Телефон<input id="phone" required type="tel" placeholder="+7 700 000 00 00" /></label><label>Жолаушы саны<select id="passengers"><option>1 жолаушы</option><option>2 жолаушы</option><option>3 жолаушы</option><option>4 жолаушы</option></select></label></div><div class="ride-type"><button type="button" class="ride active" data-type="standard"><b>🚕</b><span>Стандарт<small>жайлы көлік</small></span><strong>₸</strong></button><button type="button" class="ride" data-type="comfort"><b>🚙</b><span>Комфорт<small>кең салон</small></span><strong>₸₸</strong></button></div><div class="estimate"><span>Болжамды баға</span><strong id="price">₸ 1 200 — 1 600</strong></div><button class="submit-btn" type="submit">Такси шақыру <span>→</span></button><p class="form-note">Тапсырыс бергенде жүргізушіге телефон нөміріңіз жіберіледі.</p></form><div class="route-info"><div class="route-map"><div class="route-line"></div><div class="route-point start"></div><div class="route-point end"></div><span class="map-road r1"></span><span class="map-road r2"></span><span class="map-road r3"></span><small>GPS карта</small></div><div class="route-details"><div><span class="mini-point green"></span><p><small>Алу орны</small><b id="fromPreview">Қайдан мекенжайы</b></p></div><div><span class="mini-point red"></span><p><small>Бару орны</small><b id="toPreview">Қайда мекенжайы</b></p></div></div></div></div></section>
 
-    <section class="services section" id="services">
-      <div class="section-tag">02 — ҚЫЗМЕТТЕР</div>
-      <div class="service-list">
-        <article class="service"><span class="service-number">01</span><div><h3>Брендинг</h3><p>Бренд стратегиясы, логотип және есте қалатын визуалды стиль.</p></div><span class="service-arrow">↗</span></article>
-        <article class="service"><span class="service-number">02</span><div><h3>Веб-дизайн</h3><p>Қолдануға ыңғайлы, әдемі және бизнеске жұмыс істейтін сайттар.</p></div><span class="service-arrow">↗</span></article>
-        <article class="service"><span class="service-number">03</span><div><h3>Контент</h3><p>Әлеуметтік желіге арналған идея, арт-дирекшн және контент жүйесі.</p></div><span class="service-arrow">↗</span></article>
-      </div>
-    </section>
+    <section class="advantages" id="advantages"><div class="section-title"><span>02 / НЕГЕ БІЗ?</span><h2>Жолда өзіңізді<br /><i>еркін сезініңіз.</i></h2></div><div class="adv-grid"><article><b>01</b><span>⚡</span><h3>Жылдам</h3><p>Жақын жердегі жүргізуші 3–10 минутта келеді.</p></article><article><b>02</b><span>✓</span><h3>Қауіпсіз</h3><p>Барлық жүргізуші тексерілген, сапар бағасы ашық.</p></article><article><b>03</b><span>₸</span><h3>Тиімді баға</h3><p>Артық комиссиясыз, сапар алдында нақты бағаны көресіз.</p></article></div></section>
 
-    <section class="work section" id="work">
-      <div class="work-heading"><div class="section-tag">03 — ЖОБАЛАР</div><h2>Біз жасаған<br /><span>жұмыстар.</span></h2></div>
-      <div class="project-grid">
-        <article class="project project-large"><div class="project-image image-orange"><span>TAU<br /><b>COFFEE</b></span></div><div class="project-meta"><h3>Tau Coffee</h3><p>Бренди��г · 2024</p></div></article>
-        <article class="project project-offset"><div class="project-image image-blue"><span>QALA<br /><b>STUDIO</b></span></div><div class="project-meta"><h3>Qala Studio</h3><p>Веб-дизайн · 2024</p></div></article>
-        <article class="project"><div class="project-image image-pink"><span>JANA<br /><b>FORMA</b></span></div><div class="project-meta"><h3>Jana Forma</h3><p>Арт-дирекшн · 2023</p></div></article>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact"><div class="section-tag">04 — БАЙЛАНЫС</div><div><h2>Бірге бір нәрсе<br /><em>керемет</em> жасайық.</h2><a class="mail" href="mailto:hello@marker.studio">hello@marker.studio <span>↗</span></a></div><div class="contact-bottom"><p>Жаңа жобаңыз туралы жазыңыз.<br />Біз 1–2 жұмыс күні ішінде жауап береміз.</p><a class="button button-light" href="mailto:hello@marker.studio">Хат жазу <span>↗</span></a></div></section>
+    <section class="dispatcher" id="history"><div class="dispatcher-head"><div><span>03 / ДИСПЕТЧЕР</span><h2>Тапсырыстарды<br /><i>басқару.</i></h2></div><button id="clearOrders" class="outline-btn">Тізімді тазарту</button></div><div class="orders-panel"><div class="panel-tabs"><b>Келіп түскен тапсырыстар</b><span id="orderCount">0 тапсырыс</span></div><div id="ordersList" class="orders-list"><div class="empty">Әзірге тапсырыс жоқ. Клиент формасын толтырып көріңіз.</div></div></div></section>
   </main>
-
-  <footer class="footer"><a class="logo" href="#top">M<span>.</span></a><p>© 2024 MARKER studio</p><div><a href="#">Instagram</a><a href="#">Behance</a></div></footer>
-  <script src="script.js"></script>
+  <footer><a class="brand" href="#home"><span class="brand-mark">J</span><span>Jetisý <b>Taxi</b><small>АЛМАТЫ ОБЛЫСЫ</small></span></a><p>© 2026 Jetisý Taxi. Барлық құқықтар қорғалған.</p><a href="tel:+77070007070">+7 707 000 70 70</a></footer>
+  <div class="toast" id="toast"></div><script src="script.js"></script>
 </body>
 </html>
